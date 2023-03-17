@@ -1,7 +1,7 @@
 import React from "react";
 
 const ButtonBar = () => {
-    const categories = ["All", "Mixes", "Music", "Comedy", "ReactJS", "WebDev", "Travel", "Standup", "Cricket", "Mixes", "Cricket", "Mixes"]
+    const categories = ["All", "Mixes", "Music", "Comedy", "ReactJS", "Standup", "Cricket", "Mixes", "Cricket", "Mixes", "WebDev", "Travel", "Standup",]
   return (
     <div>
         {
