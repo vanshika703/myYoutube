@@ -1,10 +1,18 @@
-
+import {useDispatch} from "react-redux"
+import {toggleMenu} from "../utils/toggleSlice"
 
 const Header = () => {
+  const dispatch = useDispatch();
+  function handleToggleButton(){
+    console.log("toggleMenu",toggleMenu)
+    dispatch(toggleMenu())
+    console.log("dispatched toggle");
+  }
   return (
     <div className="grid grid-flow-col my-2 p-2 shadow-md">
       <div className="flex col-span-1">
         <img
+          onClick={()=>handleToggleButton()}
           alt="logo"
           className="h-7 m-1 "
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJD9Ks9HQlPD-Rpraa6krZtrX2yleg-hXwfQ&usqp=CAU"
