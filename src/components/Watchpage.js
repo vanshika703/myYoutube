@@ -3,7 +3,6 @@ import { useSearchParams } from "react-router-dom";
 
 const Watchpage = () => {
   const [searchParams] = useSearchParams();
-  console.log(searchParams.get("v"));
 
   return (
     <div className="col-span-11">

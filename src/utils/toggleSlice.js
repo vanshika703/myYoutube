@@ -8,7 +8,6 @@ const toggleSlice = createSlice({
   reducers: {
     toggleMenu: (state) => {
       state.isMenuOpen = !state.isMenuOpen;
-      console.log("toggled state in action");
     },
   },
 });

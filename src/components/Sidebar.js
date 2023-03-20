@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.toggle.isMenuOpen);
-  console.log("open/close", isMenuOpen);
+  
   const sidebarItems = [
     {
       title: "Home",
