@@ -67,7 +67,7 @@ const Header = () => {
           <div className="fixed bg-white w-1/4 p-2 mx-5 border border-gray-200 rounded-lg shadow-lg">
             <ul>
               {suggestions.map((suggestion, index) => (
-                <li key={index} className="p-1 m-1">
+                <li key={suggestion} className="p-1 m-1">
                   {suggestion}
                 </li>
               ))}
