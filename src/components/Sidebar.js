@@ -11,27 +11,27 @@ const Sidebar = () => {
       link: "/",
     },
     {
-      title: "Videos",
+      title: "Shorts",
       icon: "https://cdn-icons-png.flaticon.com/512/2898/2898856.png",
       link: "/",
     },
     {
-      title: "Home",
+      title: "Subscriptions",
       icon: "https://cdn-icons-png.flaticon.com/512/1946/1946488.png",
       link: "/",
     },
     {
-      title: "Videos",
+      title: "Library",
       icon: "https://cdn-icons-png.flaticon.com/512/2898/2898856.png",
       link: "/",
     },
     {
-      title: "Home",
+      title: "History",
       icon: "https://cdn-icons-png.flaticon.com/512/1946/1946488.png",
       link: "/",
     },
     {
-      title: "Videos",
+      title: "Your Videos",
       icon: "https://cdn-icons-png.flaticon.com/512/2898/2898856.png",
       link: "/",
     },
@@ -52,8 +52,8 @@ const Sidebar = () => {
   return (
     <div className="col-span-1 text-left m-2 p-2">
       <ul className="my-4">
-        {sidebarItems.map((sidebarItem) => (
-          <li className="p-2">
+        {sidebarItems.map((sidebarItem, index) => (
+          <li key={index} className="p-2">
             <div className="flex">
               <img alt="icon" className="h-5 m-1" src={sidebarItem.icon} />
               <p>{sidebarItem.title}</p>

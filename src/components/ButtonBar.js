@@ -5,7 +5,7 @@ const ButtonBar = () => {
   return (
     <div>
         {
-            categories.map((category) => <button className="py-1 px-4 m-3 bg-stone-100 rounded-lg">{category}</button>)
+            categories.map((category, index) => <button key={index} className="py-1 px-4 m-3 bg-stone-100 rounded-lg">{category}</button>)
         }
       
     </div>
