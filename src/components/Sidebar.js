@@ -1,26 +1,31 @@
-import React from 'react'
+import { sidebarItems } from "../utils/constants";
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
+  const isMenuOpen = useSelector((store) => store.toggle.isMenuOpen);
 
-  const sidebarItems = ["Home", "Shorts", "Subscriptions"]
-  const sidebarItems2 = ["Library", "History", "Your Videos", "Watch Later", "Liked Videos", "Show More"]
+  if (!isMenuOpen) return null;
 
   return (
-    <div className='col-span-1 text-left m-2 p-2'>
-      <ul className='my-4'>
-        {
-          sidebarItems.map((sidebarItem) => <li className='p-2'>{sidebarItem}</li>)
-        }
-      </ul>
-      <hr></hr>
-      <ul className='my-4'>
-        {
-          sidebarItems2.map((sidebarItem) => <li className='p-2'>{sidebarItem}</li>)
-        }
+    <div className="col-span-1 text-left m-2 p-2">
+      <ul className="my-4">
+        {sidebarItems &&
+          sidebarItems.map((sidebarItem, index) => (
+            <li key={index} className="p-2">
+              <div className="flex items-center">
+                <img
+                  alt={sidebarItem.title}
+                  className="h-5 m-1"
+                  src={sidebarItem.icon}
+                />
+                <p>{sidebarItem.title}</p>
+              </div>
+            </li>
+          ))}
       </ul>
       <hr></hr>
     </div>
-  )
-}
+  );
+};
 
 export default Sidebar;

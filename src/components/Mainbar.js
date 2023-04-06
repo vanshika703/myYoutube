@@ -1,4 +1,4 @@
-import React from "react";
+
 import ButtonBar from "./ButtonBar";
 import VideoWindow from "./VideoWindow";
 
