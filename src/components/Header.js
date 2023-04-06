@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../utils/toggleSlice";
+import { setToggleMenu } from "../utils/toggleSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
 
@@ -13,7 +13,7 @@ const Header = () => {
   const searchCache = useSelector((store) => store.search);
 
   function handleToggleButton() {
-    dispatch(toggleMenu());
+    dispatch(setToggleMenu());
   }
 
   async function getSeachSuggestions() {
@@ -76,7 +76,7 @@ const Header = () => {
         {showSuggestions && (
           <div className="fixed bg-white w-1/4 p-2 mx-5 border border-gray-200 rounded-lg shadow-lg">
             <ul>
-              {suggestions.map((suggestion, index) => (
+              {suggestions.map((suggestion) => (
                 <li key={suggestion} className="p-1 m-1">
                   {suggestion}
                 </li>
