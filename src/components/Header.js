@@ -40,7 +40,7 @@ const Header = () => {
   }, [searchQuery]);
 
   return (
-    <div className="grid grid-flow-col p-2 sticky w-full top-0 z-[60]">
+    <div className="grid grid-flow-col p-2 sticky w-full top-0 z-[60] bg-white ">
       <div className="flex col-span-4">
         <img
           onClick={handleToggleButton}
