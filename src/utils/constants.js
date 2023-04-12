@@ -6,36 +6,3 @@ export const YOUTUBE_VIDEOS_URL =
 
 export const YOUTUBE_SEARCH_API =
   "https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
-
-export const sidebarItems = [
-  {
-    title: "Home",
-    icon: "https://cdn-icons-png.flaticon.com/512/1946/1946488.png",
-    link: "/",
-  },
-  {
-    title: "Shorts",
-    icon: "https://cdn-icons-png.flaticon.com/512/2898/2898856.png",
-    link: "/",
-  },
-  {
-    title: "Subscriptions",
-    icon: "https://cdn-icons-png.flaticon.com/512/1946/1946488.png",
-    link: "/",
-  },
-  {
-    title: "Library",
-    icon: "https://cdn-icons-png.flaticon.com/512/2898/2898856.png",
-    link: "/",
-  },
-  {
-    title: "History",
-    icon: "https://cdn-icons-png.flaticon.com/512/1946/1946488.png",
-    link: "/",
-  },
-  {
-    title: "Your Videos",
-    icon: "https://cdn-icons-png.flaticon.com/512/2898/2898856.png",
-    link: "/",
-  },
-];
