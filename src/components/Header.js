@@ -44,12 +44,12 @@ const Header = () => {
       <div className="flex col-span-4">
         <img
           onClick={handleToggleButton}
-          alt="logo"
+          alt="hamburger icon"
           className="h-7 m-1 "
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJD9Ks9HQlPD-Rpraa6krZtrX2yleg-hXwfQ&usqp=CAU"
         />
         <img
-          alt="logo"
+          alt="Youtube logo"
           className="h-6 m-1"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
         />
@@ -67,7 +67,7 @@ const Header = () => {
           />
           <button className="py-3 px-4 border border-stone-300 bg-stone-100 rounded-r-full">
             <img
-              alt="search"
+              alt="search symbol"
               className="h-3"
               src="https://cdn-icons-png.flaticon.com/512/3917/3917132.png"
             />
@@ -114,7 +114,7 @@ const Header = () => {
           </g>
         </svg>
         <img
-          alt="Avatar"
+          alt="User Avatar"
           className="h-6 w-6 rounded-full mx-2"
           src="https://yt3.ggpht.com/yti/AHXOFjVTgdjtNwEngLpaMQ5NuEqhW_G-jbbVLvM17UtF=s88-c-k-c0x00ffffff-no-rj-mo"
         ></img>
