@@ -5,10 +5,10 @@ const VideoCard = ({ info }) => {
 
   const { snippet, statistics } = info;
   return (
-    <div className="w-96 m-3 p-3">
+    <div className="m-2 p-2">
       <img
         alt="thumbnail"
-        className="rounded-lg"
+        className="rounded-lg w-[360px]"
         src={snippet?.thumbnails?.medium.url}
       ></img>
       <div className="flex m-1">
@@ -23,7 +23,7 @@ const VideoCard = ({ info }) => {
           </p>
           <p className="text-sm text-stone-500">{snippet?.channelTitle}</p>
           <p className="text-sm text-stone-500">
-            {statistics?.viewCount} views
+            {Math.trunc((statistics?.viewCount)/1000)}K views
           </p>
         </div>
       </div>

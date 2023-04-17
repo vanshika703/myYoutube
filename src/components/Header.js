@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { setToggleMenu } from "../utils/toggleSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
+import { ReactComponent as Video } from "../utils/img/video.svg";
+import { ReactComponent as Bell } from "../utils/img/bell.svg";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -40,24 +42,24 @@ const Header = () => {
   }, [searchQuery]);
 
   return (
-    <div className="grid grid-flow-col my-2 p-2 shadow-md">
+    <div className="grid grid-flow-col p-2 sticky w-full top-0 z-[60] bg-white ">
       <div className="flex col-span-4">
         <img
           onClick={handleToggleButton}
-          alt="logo"
+          alt="hamburger icon"
           className="h-7 m-1 "
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJD9Ks9HQlPD-Rpraa6krZtrX2yleg-hXwfQ&usqp=CAU"
         />
         <img
-          alt="logo"
-          className="h-7 m-1"
+          alt="Youtube logo"
+          className="h-6 m-1"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
         />
       </div>
       <div className="col-span-6">
         <div>
           <input
-            className="w-1/2 p-2 pl-5 border border-stone-300 rounded-l-full"
+            className="w-3/4 p-2 pl-5 border border-stone-300 rounded-l-full"
             type="text"
             placeholder="Search"
             value={searchQuery}
@@ -67,14 +69,14 @@ const Header = () => {
           />
           <button className="py-3 px-4 border border-stone-300 bg-stone-100 rounded-r-full">
             <img
-              alt="search"
+              alt="search symbol"
               className="h-3"
               src="https://cdn-icons-png.flaticon.com/512/3917/3917132.png"
             />
           </button>
         </div>
         {showSuggestions && (
-          <div className="fixed bg-white w-1/4 p-2 mx-5 border border-gray-200 rounded-lg shadow-lg">
+          <div className="fixed bg-white w-1/4 p-2 mx-5 border border-gray-200 rounded-lg shadow-lg z-[90]">
             <ul>
               {suggestions.map((suggestion) => (
                 <li key={suggestion} className="p-1 m-1">
@@ -86,16 +88,13 @@ const Header = () => {
         )}
       </div>
 
-      <div className="flex col-span-1">
+      <div className="flex col-span-2">
+        <Video/>
+        <Bell/>
         <img
-          alt="logo"
-          className="h-7 m-1"
-          src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-bell-512.png"
-        ></img>
-        <img
-          alt="logo"
-          className="h-7 m-1"
-          src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
+          alt="User Avatar"
+          className="h-6 w-6 rounded-full mx-2"
+          src="https://yt3.ggpht.com/yti/AHXOFjVTgdjtNwEngLpaMQ5NuEqhW_G-jbbVLvM17UtF=s88-c-k-c0x00ffffff-no-rj-mo"
         ></img>
       </div>
     </div>
