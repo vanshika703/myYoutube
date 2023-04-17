@@ -8,12 +8,12 @@ const Sidebar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="flex flex-col w-2/12 text-left m-2 p-2">
+    <div className="flex flex-col w-2/12 text-left m-2">
       <ul className="my-4">
         {SIDEBARITEMS &&
           SIDEBARITEMS.map((sidebarItem, index) => (
-            <li key={sidebarItem.name} className="p-2">
-              <div className="flex items-center">
+            <li key={sidebarItem.name} className="px-2">
+              <div className="flex items-center hover:bg-gray-100 p-2 rounded">
                 <sidebarItem.icon />
                 <p className="text-sm px-4">{sidebarItem.title}</p>
                 <hr className={(index + 1) % 3 === 0 ? "block" : "hidden"} />

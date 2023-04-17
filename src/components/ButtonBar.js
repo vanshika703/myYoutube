@@ -7,7 +7,7 @@ const ButtonBar = () => {
       {CATEGORIES.map((category) => (
         <button
           key={category}
-          className="py-1 px-4 m-3 bg-stone-100 rounded-lg"
+          className="py-1 px-4 m-3 bg-stone-100 rounded-lg hover:bg-stone-200"
         >
           {category}
         </button>
