@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setToggleMenu } from "../utils/toggleSlice";
+import { addQuery } from "../utils/searchQuerySlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
 import { ReactComponent as Video } from "../utils/img/video.svg";
@@ -25,6 +26,10 @@ const Header = () => {
     setSuggestions(json[1]);
 
     dispatch(cacheResults({ [searchQuery]: json[1] }));
+  }
+
+  function handleSearch(){
+    dispatch(addQuery(searchQuery));
   }
 
   useEffect(() => {
@@ -67,7 +72,10 @@ const Header = () => {
             onFocus={() => setShowSuggestions(true)}
             onBlur={() => setShowSuggestions(false)}
           />
-          <button className="py-3 px-4 border border-stone-300 bg-stone-100 rounded-r-full">
+          <button
+            className="py-3 px-4 border border-stone-300 bg-stone-100 rounded-r-full"
+            onClick={handleSearch}
+          >
             <img
               alt="search symbol"
               className="h-3"
@@ -89,8 +97,8 @@ const Header = () => {
       </div>
 
       <div className="flex col-span-2">
-        <Video/>
-        <Bell/>
+        <Video />
+        <Bell />
         <img
           alt="User Avatar"
           className="h-6 w-6 rounded-full mx-2"
