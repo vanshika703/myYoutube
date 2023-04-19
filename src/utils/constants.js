@@ -24,8 +24,6 @@ export const CATEGORIES = [
   "ReactJS",
   "Standup",
   "Cricket",
-  "Mixes",
-  "Mixes",
   "WebDev",
   "Travel",
 ];
@@ -71,5 +69,4 @@ export const SIDEBARITEMS = [
     icon: WatchLater,
     link: "/",
   },
-  
 ];
